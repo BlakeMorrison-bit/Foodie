@@ -1,10 +1,10 @@
-
+const api = 'pVXR70cN-WgR9yxjWTWntERZVIhM2fm8gulq86yJn6bA9hqliH4TCl2xtpSoecfzqQ0B76Dt57mq6Z1VwvyeRaQSRglsmLpjDeLmh-9wQcibe6Qo-BSTuhoZ73l3X3Yx';
 
 const Yelp = {
     search(term, location, sortBy){
         return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
         headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_YELP_API}`
+            Authorization: `Bearer ${api}`
         }
         }).then(response => {
             return response.json();
